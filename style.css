@@ -1,0 +1,654 @@
+﻿body{
+    margin:0;
+    font-family: Tahoma, Arial, Verdana;
+    font-size: 16px;
+
+}
+.wrapper{
+    width: 1024px;
+    height: 768px;
+    margin:0 13%;
+    padding: 0;
+    /*border: 1px solid red;*/
+    background-image: url("img/2.jpg");
+    background-size: cover;
+}
+/*-----------------------------------slide-1----------------------------------------------------*/
+.first-section{
+    /*display: none;*/
+}
+.first-heading{
+    width: 57%;
+    margin-top: 56px;
+    margin-left: 218px;
+    margin-bottom: 91px;
+    font-family: 'Frutiger 55 Roman';
+    font-size: 28px;
+    color: #432171;
+    text-align: center;
+}
+.patient{
+    position: absolute;
+    top: 290px;
+    left: 296px;
+    font-size: 13px;
+
+}
+.graph{
+    width: 597px;
+    height: 360px;
+    margin-top: 90px;
+    margin-left: 214px;
+    border: 2px solid #4a2278;
+    border-radius: 0 35px 0 35px;
+    -webkit-box-shadow: 0px 9px 12px 0px rgba(50, 50, 50, 0.24);
+    -moz-box-shadow:    0px 9px 12px 0px rgba(50, 50, 50, 0.24);
+    box-shadow:         0px 9px 12px 0px rgba(50, 50, 50, 0.24);
+}
+.title{
+    width: 22%;
+    text-align: center;
+    position: relative;
+    left: 261px;
+    font-family: 'Frutiger Black';
+    font-size: 14px;
+}
+ol,ul{
+    float:left;
+}
+ol{
+    width: 12px;
+    height: 360px;
+    position: relative;
+    bottom: 78px;
+    border-radius: 0 0 0 33px;
+    background-color: #dad9da;
+}
+ol li:before {
+    content:' ';
+ }
+li{
+    margin-top: 16.75px;
+    /*margin-left: 19px;*/
+    position: relative;
+    top: 15px;
+    left: 15px;
+}
+ul{
+    position: relative;
+    bottom: 85px;
+    right: 42px;
+}
+ul li{
+    margin-top: 16px;
+    margin-left:15px;
+    list-style-type: none;
+}
+ul li:before{
+    content: '-';
+}
+.blue-graph{
+    width: 135px;
+    height: 243px;
+    margin-left: 71px;
+    margin-top: -2px;
+    float: left;
+    background: #1785a3;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    -webkit-animation: first-boo linear 0.5s;
+    -webkit-animation-delay: 0.5s;
+
+}
+.pink-graph{
+    width: 135px;
+    height: 171px;
+    margin-top: 86px;
+    margin-left: 324px;
+    background: #e3007c;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    -webkit-animation: second-boo linear 0.5s;
+    -webkit-animation-delay: 0.5s;
+}
+.block-title{
+    width: 82%;
+    margin-top: 3px;
+    margin-left: 12px;
+    color: white;
+    font-weight: bold;
+    -webkit-animation: paragraph-boo easy 0.7s;
+    -webkit-animation-delay: 1s;
+}
+.preparat{
+    width: 100%;
+    margin-top: 110px ;
+    color: white;
+    -webkit-animation: two-paragraph-boo easy 0.3s;
+    -webkit-animation-delay: 0.5s;
+}
+.preparat p:first-of-type{
+    margin-top: 150px;
+}
+.linear{
+    width: 545px;
+    height: 5px;
+    position: relative;
+    bottom: 151px;
+    left: 26px;
+    background: #4a2278;
+    border: 1px solid #4a2278;
+}
+.inscription{
+    position: relative;
+    left: 302px;
+    bottom: 158px;
+    font-family: 'Frutiger bold';
+    font-size: 15px;
+}
+.zero{
+    position: relative;
+    bottom: 164px;
+    left: 47px;
+}
+img{
+    width: 8.5%;
+    /*height: 10%;*/
+    position: relative;
+    bottom: 98px;
+    left: 496px;
+}
+.footer-description{
+    width: 48%;
+    position: relative;
+    bottom: 52px;
+    left: 67px;
+    font-family: 'Frutiger LT 45 Light';
+    font-size: 11px;
+}
+@-webkit-keyframes first-boo
+{
+    0% {height: 0px; opacity: 0;}
+    100% {height:242px; top:40px; opacity: 1;}
+}
+@-webkit-keyframes second-boo{
+    0%{height: 0px; opacity: 0;}
+    100%{height: 171px; top:110px; opacity: 1}
+}
+@-webkit-keyframes paragraph-boo{
+    0% {margin-top:100px; opacity:0;}
+    100% {margin-top:3px; opacity:1;}
+}
+/*------------------------------------slide-2--------------------------------------------*/
+.second-section{
+    /*display: none;*/
+}
+.second-heading{
+    width: 57%;
+    margin-top: 56px;
+    margin-left: 218px;
+    margin-bottom: 91px;
+    font-family: 'Frutiger 55 Roman';
+    font-size: 28px;
+    color: #432171;
+    text-align: center;
+}
+.first-calculate,.second-calculate{
+    width: 377px;
+    height: 418px;
+    margin-top: -49px;
+   /* border: 1px solid green;*/
+}
+.first-calculate{
+    margin-left: 104px;
+    float: left;
+}
+.second-calculate{
+    margin-left: 536px;
+}
+.calc{
+    width: 377px;
+    height: 52px;
+    background: linear-gradient(to top, #9d9c9d, #fcfcfc);
+}
+.textbox{
+    width: 182px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 10px;
+    color: #acabab;
+    border: 1px solid #acabab;
+    -webkit-box-shadow: inset 0px 1px 1px 0px rgba(50, 50, 50, 0.25);
+    -moz-box-shadow:  inset 0px 1px 1px 0px rgba(50, 50, 50, 0.25);
+    box-shadow: inset 0px 2px 2px 0px rgba(50, 50, 50, 0.15);
+}
+.calc-button{
+    width: 98px;
+    height: 30px;
+    color: #ffffff;
+    border: 1px solid #d93591;
+    font-family: 'Frutiger Black';
+    background: linear-gradient(to top, #e31e86, #dec1da);
+}
+.help-button{
+    width: 30px;
+    height: 30px;
+    margin-left: 33px;
+    color: #502d80;
+    font-family: 'Frutiger Black';
+    border-radius: 15px;
+    border: 1px solid #d8d9da;
+    background-color: #f0f0f0;
+    -webkit-box-shadow: inset 0px 7px 2px 0px rgba(50, 50, 50, 0.15);
+    -moz-box-shadow:  inset 0px 7px 2px 0px rgba(50, 50, 50, 0.15);
+    box-shadow: inset 0px 0px 7px 2px rgba(50, 50, 50, 0.15);
+
+}
+.description{
+    width: 364px;
+    height: 52px;
+    margin-top: 0px;
+    margin-bottom: -3px;
+    padding-left: 13px;
+    color: #7c7a7b;
+    font-size: 9px;
+    background: linear-gradient(to top, #ffffff, #e1e4e8);
+}
+.punkt{
+    width: 365px;
+    height: 33px;
+    margin-top: 4px;
+    padding-left: 12px;
+    font-family: 'Frutiger Black';
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #b8b7b7;
+}
+.injections p:last-of-type{
+    margin-top: -16px;
+}
+.first-cell, .second-cell, .third-cell, .five-cell, .seven-cell, .four-cell,.six-cell,
+.alt-cell, .nine-cell, .ten-cell, .eleven-cell{
+    width: 92px;
+    height: 23px;
+    color: #e31e86;
+    font-size: 18px;
+    margin-top: 3px;
+    font-family:'Frutiger Black';
+    text-align: right;
+    border: 1px solid #a5a4a4;
+}
+.first-cell, .second-cell, .third-cell, .five-cell,
+.seven-cell, .four-cell,.six-cell{
+    -webkit-box-shadow: inset 0px 1px 1px 0px rgba(50, 50, 50, 0.25);
+    -moz-box-shadow:  inset 0px 1px 1px 0px rgba(50, 50, 50, 0.25);
+    box-shadow: inset 0px 1px 1px 0px rgba(50, 50, 50, 0.25);
+}
+.first-cell{
+    margin-left: 85px;
+}
+.second-cell{
+    margin-left: 64px;
+}
+.third-cell{
+    margin-left: 31px;
+}
+.four-cell{
+    margin-left: 26px;
+}
+.five-cell{
+    margin-left: 82px;
+}
+.six-cell{
+    margin-left: 42px;
+}
+.seven-cell{
+    margin-left: 39px;
+}
+.plus{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-left: 7px;
+    margin-right: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: #7c7a7b;
+    border: 1px solid #9b9a9a;
+    background-color: #f0f0f0;
+    -webkit-box-shadow: inset 0px 7px 2px 0px rgba(50, 50, 50, 0.15);
+    -moz-box-shadow:  inset 0px 7px 2px 0px rgba(50, 50, 50, 0.15);
+    box-shadow: inset 0px 0px 7px 2px rgba(50, 50, 50, 0.15);
+}
+.plus span{
+    position: relative;
+    bottom: 0.5px;
+    right: 1.5px;
+}
+.punkt-description{
+    width: 377px;
+    height: 40px;
+    color: #ffffff;
+    font-size: 10px;
+    background: linear-gradient(to top, #bcbebe, #dfdfdf);
+}
+.punkt-description span{
+    magin-top: 5px;
+}
+.description-block{
+    width: 377px;
+    height: 50px;
+    color: #ffffff;
+    font-size: 10px;
+    background: linear-gradient(to top, #bcbebe, #dfdfdf);
+}
+.clinic-visits p:first-of-type{
+    margin-top: -5px;
+}
+.clinic-visits p:last-of-type{
+    margin-top: -16px;
+}
+.nurse-visits p:first-of-type{
+    margin-top: -6px;
+}
+.nurse-visits p:last-of-type{
+    margin-top: -16px;
+    margin-bottom: 5px;
+}
+.hospital-bed p:first-of-type{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.hospital-bed p:last-of-type{
+    margin-top: -10px;
+}
+.injections-two p:last-of-type{
+    margin-top: -16px;
+}
+.clinic-visits-two p:first-of-type{
+    margin-top: -5px;
+}
+.clinic-visits-two p:last-of-type{
+    margin-top: -16px;
+}
+.hospital-bed-two p:first-of-type{
+    margin-top: -7px;
+}
+.hospital-bed-two p:last-of-type{
+    margin-top: -16px;
+}
+.result{
+    width: 810px;
+    height: 86px;
+    margin-top: 8px;
+    margin-left: 103px;
+    /*border: 1px solid red;*/
+}
+.title-result{
+    height: 31px;
+    margin-top: 0px;
+    font-family: 'Frutiger Black';
+    color: #ffffff;
+    background-color: #502d80;
+}
+.result p:nth-child(2){
+    width: 193px;
+    height: 53px;
+    float: left;
+}
+.result p:nth-child(3){
+    width: 193px;
+    height: 53px;
+    float: left;
+}
+.result p:nth-child(4){
+    width: 193px;
+    height: 53px;
+    float: left;
+}
+.result p:nth-child(5){
+    width: 193px;
+    height: 53px;
+    float: left;
+}
+.first-punct, .second-punct, .third-punct, .four-punct{
+    margin-top: -16px;
+    margin-left: 9px;
+    font-family: 'Frutiger Black';
+    font-size: 12px;
+    color: #7c7a7b;
+    background: linear-gradient(to top, #f6fbfe, #e9f0f8);
+}
+.result input{
+    font-size: 15px;
+    text-align: left;
+    border: 1px solid #f2f8fe;
+    background: linear-gradient(to top, #f2f8fe, #f1f6fd);
+}
+.second-footer-description{
+    width: 704px;
+    margin-top: 40px;
+    margin-left: 104px;
+    color: #c7c6c6;
+    font-size: 11px;
+    font-family: 'Frutiger LT 45 Light';
+}
+.description span{
+    color: #e31e86;
+    text-decoration: none;
+}
+/*------------------------------------slide-3-------------------------------------------*/
+.third-section{
+    /*display: block;*/
+}
+.third-heading{
+    width: 79%;
+    margin-top: 56px;
+    margin-left: 148px;
+    margin-bottom: 91px;
+    font-family: 'Frutiger 55 Roman';
+    font-size: 28px;
+    color: #432171;
+    text-align: center;
+}
+.weight{
+    width: 898px;
+    height: 394px;
+    margin-left: 72px;
+    border: 1px solid #e3e3e5;
+    background-color: rgba(248,250,250,0.7)
+
+}
+.arrow{
+    width: 204px;
+    height: 14px;
+    margin-top: 87px;
+    margin-right: 671px;
+    border: 0;
+    -webkit-transform: rotate(90deg);
+    background: linear-gradient(to left, #1785a3, #ff0090);
+}
+
+.third-footer-description{
+    font-family: 'Frutiger 47LightCn';
+}
+.first-triangle,.second-triangle{
+    width: 0;
+    height: 0;
+    left: 109px;
+    position: relative;
+}
+.first-triangle{
+    bottom: 8px;
+    border: 1px solid #ff0090;
+    border-width: 30px 16px 0px 16px;
+    border-color: #ff0090 transparent transparent transparent;
+    -webkit-transform: rotate(180deg);
+}
+.second-triangle{
+    top: 87px;
+    border: 1px solid #1785a3;
+    border-width: 30px 16px 0px 16px;
+    border-color: #1785a3 transparent transparent transparent;
+ }
+.weight p:first-of-type{
+    margin-top: 44px;
+    margin-left: 66px;
+    font-size: 15px;
+    font-family: 'HelveticaNeueMedium';
+}
+.weight p:nth-of-type(2){
+    margin-top: 96px;
+    margin-left: 66px;
+    font-size: 15px;
+    font-family: 'HelveticaNeueMedium';
+}
+.arm{
+    width: 277px;
+    height: 10px;
+    position: relative;
+    bottom: 324px;
+    right: 14px;
+    background-color: #5b2c81;
+}
+.balance{
+    width: 22px;
+    height: 191px;
+    position: relative;
+    bottom: 410px;
+    right: 13px;
+    border: 0;
+    background-color: #5b2c81;
+    -webkit-transform: rotate(180deg);
+}
+.big-triangle{
+    width: 0;
+    height: 0;
+    position: relative;
+    bottom: 402px;
+    left: 425px;
+    border: 1px solid #5b2c81;
+    border-width: 46px 11px 0px 11px;
+    border-color: #5b2c81 transparent transparent transparent;
+    -webkit-transform: rotate(180deg);
+}
+.basis{
+    width: 145px;
+    height: 25px;
+    position: relative;
+    bottom: 455px;
+    left: 361px;
+    background-color: #5b2c81;
+}
+.basis p{
+    color: #ffffff;
+}
+.pink-oval{
+    width: 147px;
+    height: 56px;
+    position: relative;
+    bottom: 258px;
+    left: 242px;
+    background-color: #ff0090;
+    border-radius: 9px 9px 140px 140px;
+}
+.blue-oval{
+    width: 147px;
+    height: 56px;
+    position: relative;
+    bottom: 698px;
+    left: 480px;
+    background-color: #1685a2;
+    border-radius: 9px 9px 140px 140px;
+}
+.first-line,.second-line,.third-line,.four-line{
+    width: 157px;
+    height: 5px;
+    border:0;
+}
+.first-line,.second-line{
+    background-color: #ff0090;
+}
+.third-line, .four-line{
+    background-color: #1685a2;
+}
+.first-line{
+    -webkit-transform: rotate(-64deg);
+    position: relative;
+    right: 171px;
+    bottom: 266px;
+}
+.second-line{
+    -webkit-transform:rotate(64deg);
+    position: relative;
+    right: 98px;
+    bottom: 279px;
+}
+.third-line{
+    -webkit-transform: rotate(-64deg);
+    position: relative;
+    left: 67px;
+    bottom: 706px;
+
+}
+.four-line{
+    -webkit-transform: rotate(64deg);
+    position: relative;
+    left: 140px;
+    bottom: 719px;
+}
+/*ul{
+    position: relative;
+    bottom: 901px;
+    left: 612px;
+    list-style-type: none;
+}
+li{
+    width: 200px;
+}
+ul div{
+    width: 22px;
+    height: 22px;
+    margin-right: 15px;
+}*/
+/*
+.square:first-of-type{
+    background: #ff0090;
+}
+.square:last-of-type{
+    background: #1685a2;
+}*/
+.first-square{
+    background: #ff0090;
+    width: 22px;
+    height: 22px;
+    margin-right: 15px;
+}
+.second-square{
+    background: #1685a2;
+    width: 22px;
+    height: 22px;
+    margin-right: 15px;
+}
+.legend{
+    position: relative;
+    bottom: 901px;
+    left: 612px;
+}
+.small-block{
+    width: 148px;
+    height: 106px;
+    margin-top: -17px;
+    margin-left: 822px;
+    border: 1px solid #e3e3e5;
+    border-top: 0;
+    background-color: rgba(248,250,250,0.7);
+}
+.small-block p{
+    width: 70%;
+    text-align: center;
+    margin-left: 22px;
+    color: #4a2278;
+    font-family:'Frutiger 55 Roman';
+}

@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>final-task</title>
+    <link href="fonts.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div data-bind="foreach: slides()">
+                <button data-bind="click: $parent.activateSlideCommand, enable: !visible()">
+                    <span data-bind="text: name"></span>
+                </button>
+            </div>
+        </header>
+        <div data-bind="template: { name: templateName, foreach: slides() }">
+
+        </div>
+        <script type="text/html" id="GraphicsSlideTemplate">
+<!--*******************************************************slide-1********************************************************************-->
+            <section class="first-section" data-bind="visible: visible">
+                <h1 class="first-heading">Xarelto<sup>&reg;</sup>: An Effective Treatment Option in Your VTE Patients with Cancer <sup>a,8</sup></h1>
+                <p class="patient"><b>% PATIENTS<sup>b</sup></b></p>
+                <div class="graph">
+                    <p class="title">HR 0.69;<br /> 95% CI 0.36-1.33</p>
+                    <ol type="1" start="8"  reversed>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <div class="blue-graph">
+                        <p class="block-title">7.1 n=20/281</p>
+                        <p class="preparat">ENOXAPARIN / VKA</p>
+                    </div><!--end blue-graph-->
+                    <div class="pink-graph">
+                        <p class="block-title">5.1 n=16/316</p>
+                        <p class="preparat">XARELTO</p>
+                    </div><!--end pink-graph-->
+                    <hr class="linear" />
+                    <p class="zero">0</p>
+                    <p class="inscription"><b>Cancer</b></p>
+                </div><!--end graph-->
+                <img src="img/1.png" alt="people">
+                <p class="footer-description">
+                    <sup>a</sup>Xarelto is contraindicated in lesions or conditions, if they are considered to be a significant risk for major
+                    bleeding, which may include the presence of malignant neoplasms at high risk of bleeding.<br />
+                    <sup>b</sup>Outcome: symptomatic, recurrent VTE.
+                </p>
+            </section><!--end first-section-->
+        </script>
+        <!--*************************************slide-2*****************************************************************************-->
+        <script type="text/html" id="CalculatorSlideTemplate">
+            <section class="second-section" data-bind="visible: visible">
+                <h1 class="second-heading">Xarelto<sup>&reg;</sup> Estimator of Resourses Saved</h1>
+                <div class="first-calculate">
+                    <div class="calc">
+                        <input type="text" size="40" placeholder="Enter number of DVT patients here" class="textbox" data-bind='value: calculators()[0].numberPatients, valueUpdate: "afterkeydown"'>
+                        <button class="calc-button">CALCULATE</button>
+                        <button class="help-button">?</button>
+                    </div>
+                    <p class="description">
+                        Assumptions to estimate calculations: proportion of patients with DVT contraindicated
+                        for Xarelto or LMWH/VKA<sup>1.2</sup>=7.5%<br />
+                        <b>Number of patients with DVT - 7.5% = <span <span id="dvtPatientResourceSaving" data-bind="text: calculators()[0].totalNumberPatients().toFixed(2)">[A]</span></b> Total number of DVT patients
+                        eligible for LMWH/VKA or Xarelto
+                    </p>
+                    <!--********************************************************************************************-->
+                    <div class="injections">
+                        <p class="punkt">
+                            Injections avoided<sup>3-7</sup>
+                            <input type="text" size="10" value="[B + C]" class="first-cell" data-bind='value: calculators()[0].injectionsAvoidedValue().toFixed(2)'>
+                        </p>
+                        <p class="punkt-description">
+                            <button class="plus"><span>+</span></button>
+                            Injections avoided = number of LMWH injections received by cancer patients
+                            with DVT + LMWH injections received by DVT patients without cancer
+                        </p>
+                    </div>
+                    <!--******************************************************************************************-->
+                    <div class="clinic-visits">
+                        <p class="punkt">
+                            INR clinic visits avoided<sup>3,7,8</sup>
+                            <input type="text" size="10" value="[E]" class="third-cell" data-bind="value: calculators()[0].inrVisitsAvoidedValue().toFixed(2)">
+                        </p>
+                        <p class="punkt-description">
+                            <button class="plus"><span>+</span></button>
+                            INR clinic visits avoided = number of DVT patients eligible for
+                            VKA treatment * number of INR monitoring visits per patient
+                        </p>
+                    </div>
+                    <!--****************************************************************************************-->
+                    <div class="nurse-visits">
+                        <p class="punkt">
+                            Nurse visits avoided<sup>9</sup>
+                            <input type="text" size="10" value="[G]" class="five-cell" data-bind="value: calculators()[0].nurseVisitsAvoidedValue().toFixed(2)">
+                        </p>
+                        <p class="punkt-description">
+                            <button class="plus"><span>+</span></button>
+                            Nurse assistance visits avoided = number of non-cancer DVT patients eligible
+                            for initial LMWH treatment * proportion of these patients treated by nurses
+                            in their own homes * mean number of LMWH injections administered
+                        </p>
+                    </div>
+                    <!--*****************************************************************************************-->
+                    <div class="hospital-bed">
+                        <p class="punkt">
+                            Hospital bed days saved<sup>10</sup>
+                            <input type="text" size="10" value="[H]" class="seven-cell" data-bind="value: calculators()[0].hospitalBedDaysSavedValue().toFixed(2)">
+                        </p>
+                        <p class="punkt-description">
+                            <button class="plus"><span>+</span></button>
+                            Hospital bed days saved = number of eligible DVT patients * proportion of DVT
+                            patients hospitalised * number of hospital bed days saved per DVT patients
+                            treated with Xarelto
+                        </p>
+                    </div>
+                </div><!--end first-calculate-->
+
+                <div class="second-calculate">
+                    <div class="calc">
+                        <input type="text" size="40" placeholder="Enter number of patients with PE here" class="textbox" data-bind='value: calculators()[1].numberPatients, valueUpdate: "afterkeydown"'>
+                        <button class="calc-button">CALCULATE</button>
+                        <button class="help-button">?</button>
+                    </div>
+                    <p class="description">
+                        Assumptions to estimate calculations: proportion of patients with PE contraindicated
+                        for Xarelto or LMWH/VKA<sup>1.2</sup> = 15%<br />
+                        <b>Number of patients with PE - 15% = <span data-bind="text: calculators()[1].totalNumberPatients().toFixed(2)">[A]</span></b> Total number of PE patients eligible
+                        for dual LMWH/VKA or Xarelto
+                    </p>
+                    <!--******************************************************************************************-->
+                    <div class="injections-two">
+                        <p class="punkt">
+                            Injections avoided<sup>3-6, 11</sup>
+                            <input type="text" size="10" value="[B + C]" class="second-cell" data-bind='value: calculators()[1].injectionsAvoidedValue().toFixed(2)'>
+                        </p>
+                        <p class="punkt-description">
+                            <button class="plus"><span>+</span></button>
+                            Injections avoided = number of LMWH injections received by cancer patients
+                            with PE + LMWH injections received by PE patients without cancer
+                        </p>
+                    </div>
+                    <!--*********************************************************************************************-->
+                    <div class="clinic-visits-two">
+                        <p class="punkt">
+                            INR clinic visits avoided<sup>3,8,11</sup>
+                            <input type="text" size="10" value="[I]" class="four-cell" data-bind="value: calculators()[1].inrVisitsAvoidedValue().toFixed(2)">
+                        </p>
+                        <p class="description-block">
+                            <button class="plus"><span>+</span></button>
+                            INR clinic visits avoided = number of PE patients eligible for VKA
+                            treatment * number of INR monitoring visits per patient
+                        </p>
+                    </div>
+                    <!--*********************************************************************************************-->
+                    <div class="hospital-bed-two">
+                        <p class="punkt">
+                            Hospital bed days saved<sup>10</sup>
+                            <input type="text" size="10" value="[J]" class="six-cell" data-bind="value: calculators()[1].hospitalBedDaysSavedValue().toFixed(2)">
+                        </p>
+                        <p class="description-block">
+                            <button class="plus"><span>+</span></button>
+                            Hospital bed days saved = number of eligible PE patients * proportion of PE
+                            patients hospitalised * number of hospital bed days saved per PE patients
+                            treated with Xarelto
+                        </p>
+                    </div>
+                </div><!--end second-calculate-->
+
+                <div class="result">
+                    <p class="title-result">
+                        Combined DVT + PE Resources Saved
+                    </p>
+                    <!--************************************************************-->
+                    <p class="first-punct">
+                        Injections avoided<sup>3-7, 11</sup>
+                        <input type="text" size="10" value="[DVT + PE]" class="alt-cell" data-bind="value: injectionsAvoidedTotalValue().toFixed(2)">
+                    </p>
+                    <!--*************************************************************-->
+                    <p class="second-punct">
+                        INR clinic visits avoided<sup>3,7,8,11</sup>
+                        <input type="text" size="10" value="[DVT + PE]" class="nine-cell" data-bind="value: inrVisitsAvoidedTotalValue().toFixed(2)">
+                    </p>
+                    <!--*************************************************************-->
+                    <p class="third-punct">
+                        Nurse visits avoided<sup>9</sup>
+                        <input type="text" size="10" value="[DVT]" class="ten-cell" data-bind="value: nurseVisitsAvoidedTotalValue().toFixed(2)">
+                    </p>
+                    <!--*************************************************************-->
+                    <p class="four-punct">
+                        Hospital bed days saved<sup>10</sup>
+                        <input type="text" size="10" value="[DVT + PE]" class="eleven-cell" data-bind="value: hospitalBedDaysSavedTotalValue().toFixed(2)">
+                    </p>
+                    <!--*************************************************************-->
+
+                </div><!--end result-->
+                <p class="second-footer-description">
+                    Numbers provided are based on general epidemiological research and on clinical trial exerience from the Phase III programme with Xarelto. Healthcare practice
+                    may  be  different in your country (both before and after introduction of Xarelto) and thus the estimation may not reflect your country's perspective.
+                    Actual costs are not included.
+                </p>
+            </section><!--end second-section-->
+        </script>
+<!--*******************************************slide-3*******************************************************************************-->
+
+        <script type="text/html" id="BalanceSlideTemplate">
+            <section class="third-section"  data-bind="visible: visible">
+                <h1 class="third-heading">
+                    <b>Xarelto<sup>&reg;</sup> DVT Patients Reported Higher Satisfaction<sup>a,16</sup></b>
+                </h1>
+                <div class="weight">
+                    <p><b>Higher Preference</b></p>
+                    <div class="first-triangle"></div>
+                    <hr class="arrow">
+                    <div class="second-triangle"></div>
+                    <p><b>Lower Preference</b></p>
+                    <!--***************************************************************-->
+                    <div class="scales">
+                        <hr class="arm">
+                        <!--<div class="pink-weight"></div>-->
+                        <hr class="first-line">
+                        <hr class="second-line">
+                        <div class="pink-oval"><p>80.8</p></div>
+                        <div class="big-triangle"></div>
+                        <hr class="balance">
+                        <div class="basis"><p>p<0.0001</p></div>
+                        <hr class="third-line">
+                        <hr class="four-line">
+                        <!--<div class="blue-weight"></div>-->
+                        <div class="blue-oval"><p>72.7</p></div>
+                        <p>Global satisfaction<sup>b</sup></p>
+                    </div>
+                    <!--<ul>
+                        <li><div class="first-square">Xarelto (N=702)</div></li>
+                        <li><div class="second-square">Enoxaparin/VKA (N=677)</div></li>
+                    </ul>-->
+                    <div class="legend">
+                        <div class="first-square"><p>Xarelto (N=702)</p></div>
+                        <div class="second-square"><p>Enoxaparin/VKA (N=677)</p></div>
+                    </div>
+                </div>
+                <div class="small-block">
+                    <p>
+                        TSQM II
+                        GLOBAL
+                        SATISFACTION
+                    </p>
+                </div>
+                <p class="third-footer-description">
+                    <sup>a</sup>Patients participating in EINSTEIN DVT trial had confirmed acute symptomatic DVT without symptomatic PE and completed two measures of treatment satisfaction;
+                    ACTS (Anti Clot Treatment Scale) and TSQM (Treatment Satisfaction Questionnaire for Medication) in follow up visits.<sup>5,16</sup>
+                    <sup>b</sup>Score values given for burdens and benefits measured by ACTS; effectiveness, side effects, convenience and global satisfaction measured by TSQM scale.<sup>16</sup>
+                </p>
+            </section><!--end third-section-->
+        </script>
+
+    </div>
+    <script src="script.js"></script>
+
+
+</div>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
