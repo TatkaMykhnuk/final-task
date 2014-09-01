@@ -457,7 +457,7 @@ img{
     height: 394px;
     margin-left: 72px;
     border: 1px solid #e3e3e5;
-    background-color: rgba(248,250,250,0.7)
+    background-color: rgba(248,250,250,0.3);
 
 }
 .arrow{
@@ -508,9 +508,10 @@ img{
     width: 277px;
     height: 10px;
     position: relative;
-    bottom: 324px;
+    bottom: 272px;
     right: 14px;
     background-color: #5b2c81;
+    /*-webkit-transform: rotate(90deg);*/
 }
 .balance{
     width: 22px;
@@ -562,6 +563,15 @@ img{
     background-color: #1685a2;
     border-radius: 9px 9px 140px 140px;
 }
+.first-scales, .second-scales{
+    position:relative;
+}
+.first-scales{
+    /*top:51px;*/
+}
+.second-scales{
+    /*top: 51px;*/
+}
 .first-line,.second-line,.third-line,.four-line{
     width: 157px;
     height: 5px;
@@ -598,27 +608,6 @@ img{
     left: 140px;
     bottom: 719px;
 }
-/*ul{
-    position: relative;
-    bottom: 901px;
-    left: 612px;
-    list-style-type: none;
-}
-li{
-    width: 200px;
-}
-ul div{
-    width: 22px;
-    height: 22px;
-    margin-right: 15px;
-}*/
-/*
-.square:first-of-type{
-    background: #ff0090;
-}
-.square:last-of-type{
-    background: #1685a2;
-}*/
 .first-square{
     background: #ff0090;
     width: 22px;
@@ -643,7 +632,7 @@ ul div{
     margin-left: 822px;
     border: 1px solid #e3e3e5;
     border-top: 0;
-    background-color: rgba(248,250,250,0.7);
+    background-color: rgba(248,250,250,0.3);
 }
 .small-block p{
     width: 70%;

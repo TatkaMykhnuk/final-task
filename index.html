@@ -86,7 +86,7 @@
                     <div class="injections">
                         <p class="punkt">
                             Injections avoided<sup>3-7</sup>
-                            <input type="text" size="10" value="[B + C]" class="first-cell" data-bind='value: calculators()[0].injectionsAvoidedValue().toFixed(2)'>
+                            <input readonly type="text" size="10" value="[B + C]" class="first-cell" data-bind='value: calculators()[0].injectionsAvoidedValue().toFixed(2)'>
                         </p>
                         <p class="punkt-description">
                             <button class="plus"><span>+</span></button>
@@ -98,7 +98,7 @@
                     <div class="clinic-visits">
                         <p class="punkt">
                             INR clinic visits avoided<sup>3,7,8</sup>
-                            <input type="text" size="10" value="[E]" class="third-cell" data-bind="value: calculators()[0].inrVisitsAvoidedValue().toFixed(2)">
+                            <input readonly type="text" size="10" value="[E]" class="third-cell" data-bind="value: calculators()[0].inrVisitsAvoidedValue().toFixed(2)">
                         </p>
                         <p class="punkt-description">
                             <button class="plus"><span>+</span></button>
@@ -110,7 +110,7 @@
                     <div class="nurse-visits">
                         <p class="punkt">
                             Nurse visits avoided<sup>9</sup>
-                            <input type="text" size="10" value="[G]" class="five-cell" data-bind="value: calculators()[0].nurseVisitsAvoidedValue().toFixed(2)">
+                            <input readonly type="text" size="10" value="[G]" class="five-cell" data-bind="value: calculators()[0].nurseVisitsAvoidedValue().toFixed(2)">
                         </p>
                         <p class="punkt-description">
                             <button class="plus"><span>+</span></button>
@@ -123,7 +123,7 @@
                     <div class="hospital-bed">
                         <p class="punkt">
                             Hospital bed days saved<sup>10</sup>
-                            <input type="text" size="10" value="[H]" class="seven-cell" data-bind="value: calculators()[0].hospitalBedDaysSavedValue().toFixed(2)">
+                            <input readonly type="text" size="10" value="[H]" class="seven-cell" data-bind="value: calculators()[0].hospitalBedDaysSavedValue().toFixed(2)">
                         </p>
                         <p class="punkt-description">
                             <button class="plus"><span>+</span></button>
@@ -150,7 +150,7 @@
                     <div class="injections-two">
                         <p class="punkt">
                             Injections avoided<sup>3-6, 11</sup>
-                            <input type="text" size="10" value="[B + C]" class="second-cell" data-bind='value: calculators()[1].injectionsAvoidedValue().toFixed(2)'>
+                            <input readonly type="text" size="10" value="[B + C]" class="second-cell" data-bind='value: calculators()[1].injectionsAvoidedValue().toFixed(2)'>
                         </p>
                         <p class="punkt-description">
                             <button class="plus"><span>+</span></button>
@@ -162,7 +162,7 @@
                     <div class="clinic-visits-two">
                         <p class="punkt">
                             INR clinic visits avoided<sup>3,8,11</sup>
-                            <input type="text" size="10" value="[I]" class="four-cell" data-bind="value: calculators()[1].inrVisitsAvoidedValue().toFixed(2)">
+                            <input readonly type="text" size="10" value="[I]" class="four-cell" data-bind="value: calculators()[1].inrVisitsAvoidedValue().toFixed(2)">
                         </p>
                         <p class="description-block">
                             <button class="plus"><span>+</span></button>
@@ -174,7 +174,7 @@
                     <div class="hospital-bed-two">
                         <p class="punkt">
                             Hospital bed days saved<sup>10</sup>
-                            <input type="text" size="10" value="[J]" class="six-cell" data-bind="value: calculators()[1].hospitalBedDaysSavedValue().toFixed(2)">
+                            <input readonly type="text" size="10" value="[J]" class="six-cell" data-bind="value: calculators()[1].hospitalBedDaysSavedValue().toFixed(2)">
                         </p>
                         <p class="description-block">
                             <button class="plus"><span>+</span></button>
@@ -192,22 +192,22 @@
                     <!--************************************************************-->
                     <p class="first-punct">
                         Injections avoided<sup>3-7, 11</sup>
-                        <input type="text" size="10" value="[DVT + PE]" class="alt-cell" data-bind="value: injectionsAvoidedTotalValue().toFixed(2)">
+                        <input readonly type="text" size="10" value="[DVT + PE]" class="alt-cell" data-bind="value: injectionsAvoidedTotalValue().toFixed(2)">
                     </p>
                     <!--*************************************************************-->
                     <p class="second-punct">
                         INR clinic visits avoided<sup>3,7,8,11</sup>
-                        <input type="text" size="10" value="[DVT + PE]" class="nine-cell" data-bind="value: inrVisitsAvoidedTotalValue().toFixed(2)">
+                        <input readonly type="text" size="10" value="[DVT + PE]" class="nine-cell" data-bind="value: inrVisitsAvoidedTotalValue().toFixed(2)">
                     </p>
                     <!--*************************************************************-->
                     <p class="third-punct">
                         Nurse visits avoided<sup>9</sup>
-                        <input type="text" size="10" value="[DVT]" class="ten-cell" data-bind="value: nurseVisitsAvoidedTotalValue().toFixed(2)">
+                        <input readonly type="text" size="10" value="[DVT]" class="ten-cell" data-bind="value: nurseVisitsAvoidedTotalValue().toFixed(2)">
                     </p>
                     <!--*************************************************************-->
                     <p class="four-punct">
                         Hospital bed days saved<sup>10</sup>
-                        <input type="text" size="10" value="[DVT + PE]" class="eleven-cell" data-bind="value: hospitalBedDaysSavedTotalValue().toFixed(2)">
+                        <input readonly type="text" size="10" value="[DVT + PE]" class="eleven-cell" data-bind="value: hospitalBedDaysSavedTotalValue().toFixed(2)">
                     </p>
                     <!--*************************************************************-->
 
@@ -234,18 +234,22 @@
                     <p><b>Lower Preference</b></p>
                     <!--***************************************************************-->
                     <div class="scales">
-                        <hr class="arm">
+                        <hr class="arm" data-bind="style: { transform: armDegValue() }">
                         <!--<div class="pink-weight"></div>-->
-                        <hr class="first-line">
-                        <hr class="second-line">
-                        <div class="pink-oval"><p>80.8</p></div>
+                        <div class="first-scales" data-bind="style: { top: leftScalePosition() }">
+                            <hr class="first-line">
+                            <hr class="second-line">
+                            <div class="pink-oval"><p data-bind="text: leftValue()">80.8</p></div>
+                        </div>
                         <div class="big-triangle"></div>
                         <hr class="balance">
                         <div class="basis"><p>p<0.0001</p></div>
-                        <hr class="third-line">
-                        <hr class="four-line">
-                        <!--<div class="blue-weight"></div>-->
-                        <div class="blue-oval"><p>72.7</p></div>
+                        <div class="second-scales" data-bind="style: { top: rightScalePosition() }">
+                            <hr class="third-line">
+                            <hr class="four-line">
+                            <!--<div class="blue-weight"></div>-->
+                            <div class="blue-oval"><p data-bind="text: rightValue()">72.7</p></div>
+                        </div>
                         <p>Global satisfaction<sup>b</sup></p>
                     </div>
                     <!--<ul>
@@ -253,8 +257,8 @@
                         <li><div class="second-square">Enoxaparin/VKA (N=677)</div></li>
                     </ul>-->
                     <div class="legend">
-                        <div class="first-square"><p>Xarelto (N=702)</p></div>
-                        <div class="second-square"><p>Enoxaparin/VKA (N=677)</p></div>
+                        <div class="first-square" data-bind="click: redLegendClickCommand"><p>Xarelto (N=702)</p></div>
+                        <div class="second-square" data-bind="click: blueLegendClickCommand"><p>Enoxaparin/VKA (N=677)</p></div>
                     </div>
                 </div>
                 <div class="small-block">

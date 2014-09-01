@@ -81,6 +81,54 @@ var calculatorSlideViewModel = function(){
 
 calculatorSlideViewModel.prototype = new slideViewModelBase(false, "Calculator", "CalculatorSlideTemplate");
 
+var balanceSlideViewModel = function(){
+    var self = this;
+
+    self.leftValue = ko.observable(50);
+    self.rightValue = ko.observable(50);
+    self.armDegrees = ko.observable(0);
+
+    self.leftScalePosition = ko.computed(function() {
+        return self.leftValue()  + "px";
+    });
+
+    self.rightScalePosition = ko.computed(function() {
+        return self.rightValue()  + "px";
+    });
+
+    self.armDegValue = ko.computed(function() {
+        return "rotate(" + self.armDegrees() + "deg)";
+    });
+
+    self.redLegendClickCommand = function(){
+        var timer = setInterval(function() {
+            self.leftValue(self.leftValue() + 1);
+            self.rightValue(self.rightValue() - 1);
+
+            self.armDegrees(self.armDegrees() - 0.47);
+
+            if(self.leftValue() >= 90){
+                clearInterval(timer);
+            }
+        }, 15);
+    }
+
+    self.blueLegendClickCommand = function(){
+        var timer = setInterval(function() {
+            self.rightValue(self.rightValue() + 1);
+            self.leftValue(self.leftValue() - 1);
+
+            self.armDegrees(self.armDegrees() + 0.47);
+
+            if(self.rightValue() >= 90){
+                clearInterval(timer);
+            }
+        }, 15);
+    }
+}
+
+balanceSlideViewModel.prototype = new slideViewModelBase(true, "Balance", "BalanceSlideTemplate");
+
 var slidesNames = ['Graphics','Calculator', 'Balance'];
 
 var viewModel = function() {
@@ -96,7 +144,9 @@ var viewModel = function() {
         var newSlideViewModel = new slideViewModelBase(false, slidesNames[i], templateName);
         if(slidesNames[i] == 'Calculator'){
             newSlideViewModel = new calculatorSlideViewModel();
-            newSlideViewModel.visible(true);
+        }
+        else if(slidesNames[i] == 'Balance'){
+            newSlideViewModel = new balanceSlideViewModel();
         }
         self.slides.push(newSlideViewModel);
     }
